@@ -55,11 +55,13 @@
     </header>
 
     <!-- MAIN -->
-    <main class="page">
+    <main class="main">
       <!-- HERO -->
-      <section class="main__page">
-        <h1 class="main__title">Ефективні рішення для вашого бізнесу</h1>
-        <button class="button-hero" type="button">Замовити послугу</button>
+      <section class="main-hero">
+        <div class="hero-container">
+          <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
+          <button class="button-hero" type="button">Замовити послугу</button>
+        </div>
       </section>
 
       <!-- INFORMATION ABOUT -->
@@ -67,29 +69,29 @@
         <div class="container main__container">
           <h2 hidden>Переваги</h2>
           <div class="advantage-container">
-            <ul class="advantage">
-              <li class="advantage-title">
+            <ul class="advantage card-set">
+              <li class="advantage-title card-set-item">
                 <h3 class="information__title title">УВАГА ДО ДЕТАЛЕЙ</h3>
                 <p class="information__text">
                   Ідейні міркування, і навіть початок повсякденної роботи з
                   формування позиції.
                 </p>
               </li>
-              <li class="advantage-title">
+              <li class="advantage-title card-set-item">
                 <h3 class="information__title title">ПУНКТУАЛЬНІСТЬ</h3>
                 <p class="information__text">
                   Завдання організації, особливо рамки і місце навчання кадрів
                   тягне у себе.
                 </p>
               </li>
-              <li class="advantage-title">
+              <li class="advantage-title card-set-item">
                 <h3 class="information__title title">ПЛАНУВАННЯ</h3>
                 <p class="information__text">
                   Так само консультація з широким активом значною мірою
                   зумовлює.
                 </p>
               </li>
-              <li class="advantage-title">
+              <li class="advantage-title card-set-item">
                 <h3 class="information__title title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
                 <p class="information__text">
                   Значимість цих проблем настільки очевидна, що реалізація
@@ -102,26 +104,26 @@
       </section>
 
       <!-- BUSY - TEAM -->
-      <section>
+      <section class="main-busy">
         <div class="container">
           <h2 class="busy-team">Чим ми займаємося</h2>
           <div class="busy-container">
-            <ul class="busy-items">
-              <li>
+            <ul class="busy-items card-set">
+              <li class="busy-list card-set-item">
                 <img
                   src="./images/bizy/box_1.jpg"
                   alt="Наиписання коду для ноутів"
                   height="294"
                 />
               </li>
-              <li>
+              <li class="busy-list card-set-item">
                 <img
                   src="./images/bizy/box_2.jpg"
                   alt="Написання коду для телефонів"
                   height="294"
                 />
               </li>
-              <li>
+              <li class="busy-list card-set-item">
                 <img
                   src="./images/bizy/box_3.jpg"
                   alt="Написання коду для планшетів"
@@ -137,16 +139,18 @@
       <section class="team">
         <div class="container team__container">
           <h2 class="busy-team">Наша команда</h2>
-          <ul class="team-items">
-            <li class="team__itams">
+          <ul class="team-items card-set">
+            <li class="team__itams card-set-item">
               <img
                 src="./images/our_team/product_designer.jpg"
                 alt="Product Designer"
                 height="260"
                 width="270"
               />
-              <h3 class="title-team">Ігор Дем'яненко</h3>
-              <p class="proffecion" lang="en">Product Designer</p>
+              <div class="team-wrapper">
+                <h3 class="title-team">Ігор Дем'яненко</h3>
+                <p class="proffecion" lang="en">Product Designer</p>
+              </div>
             </li>
             <li class="team__itams">
               <img
@@ -155,8 +159,10 @@
                 height="260"
                 width="270"
               />
-              <h3 class="title-team">Ольга Рєпіна</h3>
-              <p  class="proffecion" lang="en">Frontend Develope</p>
+              <div class="team-wrapper">
+                <h3 class="title-team">Ольга Рєпіна</h3>
+                <p class="proffecion" lang="en">Frontend Develope</p>
+              </div>
             </li>
             <li class="team__itams">
               <img
@@ -165,8 +171,10 @@
                 height="260"
                 width="270"
               />
-              <h3 class="title-team">Микола Тарасов</h3>
-              <p  class="proffecion" lang="en">Marketing</p>
+              <div class="team-wrapper">
+                <h3 class="title-team">Микола Тарасов</h3>
+                <p class="proffecion" lang="en">Marketing</p>
+              </div>
             </li>
             <li class="team__itams">
               <img
@@ -175,8 +183,10 @@
                 height="260"
                 width="270"
               />
-              <h3 class="title-team">Михайло Єрмаков</h3>
-              <p  class="proffecion" lang="en">UI Designer</p>
+              <div class="team-wrapper">
+                <h3 class="title-team">Михайло Єрмаков</h3>
+                <p class="proffecion" lang="en">UI Designer</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -192,7 +202,7 @@
         >
         <address>
           <ul class="footer-list">
-            <li>
+            <li class="footer-item">
               <a
                 class="footer-a"
                 href="https://g.page/ak-lesi?share"
@@ -201,12 +211,12 @@
                 >м. Київ, пр-т Лесі Українки, 26</a
               >
             </li>
-            <li>
+            <li class="footer-item">
               <a class="footer-a contacts" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
-            <li>
+            <li class="footer-item">
               <a class="footer-a contacts" href="tel:+380961111111"
                 >+38 096 111 11 11</a
               >

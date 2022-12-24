@@ -9,14 +9,27 @@
 
 
 :root{
+
+
+   /* Text colors */
   --color-black: #212121;
   --color-grey: #757575;
   --color-white: #FFFFFF;
+  --color-grey-a: rgba(117, 117, 117, 1);
+
+  /* BG colors */
   --color-backgraund-html: #F5F5F5;
   --color-backgraund-section: #FFFFFF;
   --color-background-main-footer: #2F303A;
   --color-backgraund-team: #F5F4FA;
+  
+  
   --color-logo-blue: #2196F3;
+
+  /* Others */
+  --btn-radius: 25px;
+  --indent: 30px;
+  --items: 3;
 }
 
 body {
@@ -30,9 +43,28 @@ body {
   ;
  }
 
-h1, h2, h3, p {
+/* reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  justify-content: center;
+} 
 
 a{
 	text-decoration: none;
@@ -52,9 +84,30 @@ ul {
   margin-right: auto;
   /* outline: 3px solid red; */
 }
+
+
+/**
+  |============================
+  | Card set
+  |============================
+*/
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+.card-set-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
 /*------------------ Стилі для index.html-------------------------------- */
 
-/*    HEADER   */
+/**
+  |============================
+  |         HEADER
+  |============================
+*/
 
 .header .container {
   display: flex;
@@ -144,10 +197,7 @@ ul {
   margin-left: 50px;
 }
 
-/*Шапка*/
-
-
-.main__page, .footer {
+.main-hero, .footer {
   background-color: var(--color-background-main-footer);
   color: var(--color-white);
 }
@@ -158,32 +208,38 @@ ul {
   margin-left: 93px;
 }
 
-/* container */
+/**
+  |============================
+  |         HEADER
+  |============================
+*/
 
-/* .container {
-  width: 1200px;
-  padding-right: 0;
-  padding-left: 0;
-} */
+/**
+  |============================
+  |         HERO
+  |============================
+*/
 
-/*Hero - page*/
+.hero {
 
-.main__page {
-  text-align: center;
 }
 
-.main__title {
+.main-hero {
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.hero__title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
-/* or 136% */
   max-width: 696px;
   margin: auto;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 36px;
-  padding-top: 200px;
-}
+ }
 
 .button-hero {
   font-family: inherit;
@@ -200,20 +256,21 @@ ul {
   border-width: inherit;
   text-align: center;
   min-width: 216px;
-  margin-bottom: 200px;
 }
 
 
 /*===INFORMATION ABOUT===*/
 
+.main__information {
+  padding: 94px;
+}
+
 .main__container {
-  padding: 94px 15px;
-  
+  padding: 15px;
 }
 
 .advantage {
-  display: flex;
-  
+  --items: 4;
 }
 
 .advantage-title > .title {
@@ -223,13 +280,16 @@ ul {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   line-height: 1.71;
-  
 }
 
 .advantage-title > .information__text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
+}
+
+.information__text {
+  color: var(--color-grey-a);
 }
 
 .information__title {
@@ -239,17 +299,20 @@ ul {
 
 /*========BUSY-TEAM=====*/
 
+.main-busy {
+  padding-bottom: 94px;
+}
+
 .busy-team {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-   margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
-.busy-items {
-  display: flex;
-  justify-content: space-between;
+.proffecion {
+  color: var(--color-grey-a);
 }
 
 /*=========OUR TEAM=======*/
@@ -270,13 +333,13 @@ ul {
   font-weight: 500;
 }
 
-.our-team__itams {
-  background-color: var(--color-backgraund-section);
+.team-items {
+  --items: 4;
 }
 
-.team-items {
-  display: flex;
-  justify-content: space-between;
+.team__itams {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .title-team {
@@ -299,7 +362,18 @@ ul {
 
 .footer-list {
   padding: 0;
-  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.footer-item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  margin-bottom: 9px;;
+}
+
+.footer-item:last-child {
+  margin-bottom: 0;
 }
 
 .logo > .logo__white {
@@ -331,26 +405,44 @@ ul {
 
 /* -------------------Стилі для portfolio.html------------------------------------ */
 
+/**
+  |============================
+  | BUTTON-FILTR
+  |============================
+*/
 
-button {
-  font-family: inherit;
-  margin-bottom: 50px;
-  justify-content: center;
- 
-}
 .button-list {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   margin-left: 8px;
+  margin-bottom: 50px;
+  padding: 6px 25px;
+  border-width: inherit;
+  border-radius: 4px;
 }
 
 .button-list:hover,
 .button-list:focus {
   color: var(--color-white);
   background-color: #2196F3;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  
 }
+
+.filtr__button {
+  display: flex;
+  justify-content: center;
+  
+}
+
+/**
+  |============================
+  | CARDS
+  |============================
+*/
 
 .main-title {
   font-weight: 700;
@@ -361,28 +453,14 @@ button {
 }
 
 .main-text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.88;
-}
-
-.works {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-
-.main-text {
   margin-bottom: 20px;
   margin-top: 4px;
+  color: var(--color-grey-a);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(30 / 16);
 }
 
-.filtr__button {
-  display: flex;
-  justify-content: center;
-  
-}
 
 
 
